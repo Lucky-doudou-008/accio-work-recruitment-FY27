@@ -652,6 +652,35 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">AI Infra 大模型训练/分布式训练工程师（后训练/RL）- Accio Work</h3>
                         <p class="text-sm text-gray-500 mb-4">Megatron 大规模分布式训练 · SGLang 高吞吐推理 · post-training infra · profiling/monitoring</p>
+                        <div class="text-sm text-gray-700 mb-4 space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">岗位职责：</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>支撑模型团队使用 Megatron 进行大规模分布式训练，处理 tensor parallel、pipeline parallel、data parallel、expert parallel、sequence/context parallel 等并行策略相关问题；</li>
+                                    <li>支撑模型团队使用 SGLang 进行高吞吐推理和 rollout，优化 batching、KV cache、prefill/decode 调度、长上下文稳定性和在线训练链路；</li>
+                                    <li>设计和实现面向更大模型规模的 post-training infra，降低训练资源成本，提高实验迭代效率和系统稳定性；</li>
+                                    <li>建设 profiling、benchmark、monitoring 和 debugging 工具，提升训练吞吐、GPU utilization、rollout 稳定性和故障定位效率；</li>
+                                    <li>与研究员和模型工程师紧密合作，把新的训练想法快速落地成可复现、可扩展、可长期维护的系统能力。</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">任职要求：</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>扎实的工程能力，熟悉 Python，最好熟悉一种系统语言或高性能计算相关语言，例如 C++、CUDA、Rust 或 Go；</li>
+                                    <li>熟悉 PyTorch 生态，理解大模型训练的基本流程，包括 forward/backward、optimizer、checkpoint、activation checkpointing、mixed precision 等；</li>
+                                    <li>有分布式系统或大规模训练经验，理解 GPU 集群、NCCL、通信开销、显存瓶颈、吞吐优化和故障恢复；</li>
+                                    <li>对 Megatron、DeepSpeed、FSDP、SGLang、vLLM、TensorRT-LLM、Ray 等训练或推理系统中的至少一类有实际使用或开发经验；</li>
+                                    <li>理解大模型 post-training 的基本范式，例如 SFT、DPO、PPO、GRPO、RLHF、RLAIF 或 agentic RL；</li>
+                                    <li>能够在复杂系统中定位问题：从日志、metric、profile、checkpoint、到分布式 rank 行为，都愿意追到根因；</li>
+                                    <li>有强 ownership，能把一次性的实验脚本沉淀成可复用的工具、模板、文档和稳定接口；</li>
+                                    <li>能和研究团队高效协作，既尊重研究速度，也重视系统正确性和长期可维护性。</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">加分项：</p>
+                                <p class="text-gray-600">做过 LLM training infra、RLHF infra、online RL、agent training、tool-use training、MoE 训练、低精度训练/推理、PEFT 或高质量开源 infra 项目。</p>
+                            </div>
+                        </div>
                         <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100023695010" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
                             立即投递
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
