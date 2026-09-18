@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accio Work 鎷涜仒 | 闃块噷宸村反闃块噷鍥介檯</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accio-dark': '#ffffff',
+                        'accio-navy': '#f8fafc',
+                        'accio-card': '#ffffff',
+                        'accio-orange': '#ff6a00',
+                        'accio-gold': '#ffb84d',
+                        'accio-cyan': '#00d4ff',
+                        'accio-blue': '#2d62ff',
+                    },
+                    fontFamily: {
+                        'display': ['"Playfair Display"', '"Noto Serif SC"', 'serif'],
+                        'body': ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 3s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --accio-logo: url("data:image/png;base64,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");
+        }
+
+        .accio-logo {
+            background-image: var(--accio-logo);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1f2937;
+            font-family: "Noto Sans SC", sans-serif;
+            overflow-x: hidden;
+        }
+
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .gradient-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 106, 0, 0.10) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+            bottom: 10%;
+            left: -150px;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(45, 98, 255, 0.08) 0%, transparent 70%);
+            top: 40%;
+            right: 10%;
+            animation: float 14s ease-in-out infinite;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ff6a00 0%, #ffb84d 50%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-alt {
+            background: linear-gradient(135deg, #00d4ff 0%, #2d62ff 50%, #ff6a00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .job-card {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .job-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 106, 0, 0.4);
+            box-shadow: 0 20px 40px rgba(255, 106, 0, 0.10);
+        }
+
+        .category-tab {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .category-tab.active {
+            background: linear-gradient(135deg, rgba(255, 106, 0, 0.2), rgba(0, 212, 255, 0.15));
+            border-color: rgba(255, 106, 0, 0.5);
+            color: #ff6a00;
+        }
+
+        .category-tab:hover:not(.active) {
+            border-color: rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .tag {
+            background: rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .accent-line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6a00, #00d4ff);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(circle at center, black 0%, transparent 70%);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6a00, #ff8c00);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 106, 0, 0.25);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: #00d4ff;
+            color: #00d4ff;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.70);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .highlight-border {
+            position: relative;
+        }
+
+        .highlight-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 106, 0, 0.6), rgba(0, 212, 255, 0.6), transparent);
+        }
+
+        .hidden-jobs {
+            display: none;
+        }
+
+        .hidden-jobs.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .role-badge {
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="grain"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
+    <div class="fixed inset-0 hero-grid -z-10"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <span class="font-display font-bold text-xl md:text-2xl text-gradient italic">Accio Work</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm text-gray-600">
+                <a href="#about" class="hover:text-accio-blue transition-colors">涓氬姟浠嬬粛</a>
+                <a href="#why" class="hover:text-accio-blue transition-colors">鍥㈤槦浼樺娍</a>
+                <a href="#opensource" class="hover:text-accio-blue transition-colors">寮€婧愰」鐩?/a>
+                <a href="#roles" class="hover:text-accio-blue transition-colors">鎷涜仒宀椾綅</a>
+                <a href="#apply" class="hover:text-accio-blue transition-colors">鎶曢€掓柟寮?/a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+            <div class="section-fade">
+                <p class="text-accio-blue text-sm md:text-base tracking-[0.3em] uppercase mb-6 font-medium">Alibaba International 路 Native AI Agent</p>
+                <h1 class="leading-tight mb-8">
+                    <span class="block font-display text-5xl md:text-7xl lg:text-8xl font-black text-gradient italic mb-2 md:mb-4">Accio Work</span>
+                    <span class="block font-display text-5xl md:text-7xl lg:text-8xl font-black text-gradient italic">鏈熷緟浣犵殑鍔犲叆</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    Native AI Agent<br>
+                    General Agent | E-commerce Agent
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#roles" class="btn-primary px-8 py-4 rounded-full text-gray-900 font-bold text-lg inline-flex items-center justify-center gap-2">
+                        鏌ョ湅鍦ㄦ嫑宀椾綅
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    </a>
+                    <a href="#apply" class="btn-secondary px-8 py-4 rounded-full text-gray-900 font-bold text-lg inline-flex items-center justify-center gap-2">
+                        鑱旂郴 HR 鍜ㄨ
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 section-fade" style="transition-delay: 0.2s;">
+                <div class="stat-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-display font-bold text-gradient mb-2">5000涓?</div>
+                    <div class="text-sm text-gray-500">娲昏穬鐨勭敤鎴?/div>
+                </div>
+                <div class="stat-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-display font-bold text-gradient mb-2">190+</div>
+                    <div class="text-sm text-gray-500">瑕嗙洊鍥藉涓庡湴鍖?/div>
+                </div>
+                <div class="stat-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-display font-bold text-gradient mb-2">150涓?</div>
+                    <div class="text-sm text-gray-500">浼樿川渚涘簲鍟?/div>
+                </div>
+                <div class="stat-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-display font-bold text-gradient mb-2">10浜?</div>
+                    <div class="text-sm text-gray-500">澶氭ā鎬佸晢鍝?/div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Accio Work -->
+    <section id="about" class="relative py-24 md:py-32 bg-gradient-to-b from-transparent via-gray-100/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 section-fade">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-accio-cyan/10 to-accio-blue/10 rounded-3xl blur-2xl"></div>
+                        <div class="relative job-card rounded-3xl p-8 md:p-10 highlight-border">
+                            <div class="text-6xl mb-6">馃</div>
+                            <h3 class="font-display text-2xl font-bold mb-4">鏍稿績鑳藉姏涓庡競鍦鸿鍙?/h3>
+
+                            <div class="space-y-3 text-gray-600 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-accio-gold">鈽?/span>
+                                    <span class="text-sm">WAIC SAIL 澶у</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-accio-gold">鈽?/span>
+                                    <span class="text-sm">銆奆ast Company銆嬮珮搴﹁瘎浠?/span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-accio-gold">鈽?/span>
+                                    <span class="text-sm">銆婃椂浠ｅ懆鍒娿€嬩笓棰樻姤閬?/span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="text-accio-gold">鈽?/span>
+                                    <span class="text-sm">鍏ㄧ悆棣栦釜 B2B AI Agent 鏍囨潌</span>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-3">
+                                <div class="tag rounded-xl p-3">
+                                    <div class="font-bold text-accio-blue text-sm mb-1">7脳24 鐙珛鎵ц</div>
+                                    <div class="text-xs text-gray-500">闀挎祦绋嬪鏉備换鍔¤嚜鍔ㄥ畬鎴?/div>
+                                </div>
+                                <div class="tag rounded-xl p-3">
+                                    <div class="font-bold text-accio-blue text-sm mb-1">鑷垜杩涘寲</div>
+                                    <div class="text-xs text-gray-500">鎸佺画瀛︿範浼樺寲浠诲姟鎵ц鑳藉姏</div>
+                                </div>
+                                <div class="tag rounded-xl p-3">
+                                    <div class="font-bold text-accio-blue text-sm mb-1">涓诲姩鍝嶅簲</div>
+                                    <div class="text-xs text-gray-500">浠庤鍔ㄩ棶绛斿埌涓诲姩鍟嗕笟琛屽姩</div>
+                                </div>
+                                <div class="tag rounded-xl p-3">
+                                    <div class="font-bold text-accio-blue text-sm mb-1">涓板瘜 Skills 鐢熸€?/div>
+                                    <div class="text-xs text-gray-500">闆朵笂鎵嬫垚鏈紝浼佷笟绾у畨鍏ㄤ繚闅?/div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-6 border-t border-gray-200 grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-sm text-gray-500 mb-1">Accio 涓婄嚎</div>
+                                    <div class="text-base font-bold text-gray-900">2024.11.13</div>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500 mb-1">Accio Work 涓婄嚎</div>
+                                    <div class="text-base font-bold text-gray-900">2026.03.24</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 section-fade" style="transition-delay: 0.15s;">
+                    <div class="accent-line mb-6"></div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900">Accio Work</h2>
+                    <p class="text-accio-blue text-lg font-medium mb-6">鍏ㄧ悆棣栦釜 B2B AI 鍘熺敓搴旂敤 路 涓撲负鍟嗕笟鎵撻€犵殑 AI 鏅鸿兘浣撳钩鍙?/p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        鐢遍樋閲屽浗闄呯珯锛圓libaba.com锛変簬 2024 骞?11 鏈堟帹鍑猴紝Accio 閫氳繃 AI 鎶€鏈噸鏂板畾涔夊叏鐞?B2B 璺ㄥ璐告槗娴佺▼锛屽疄鐜颁粠"AI 鎼滅储""Chatbot"鍒?Agent"鐨勮繘鍖栥€?                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        鎵撶牬浼犵粺鑱婂ぉ鐨勫眬闄愶紝鐪熸鎵ц鍟嗕笟浠诲姟銆侫ccio Work 灏嗕腑灏忎紒涓氱殑鏃ュ父宸ヤ綔鍏ㄩ潰鑷姩鍖栤€斺€斾粠璋冪爺鍒嗘瀽銆佸婧愯皥鍒わ紝鍒伴攢鍞惀閿€銆佸簵閾鸿繍钀ワ紝涓€绔欏紡鍏ㄦ悶瀹氥€傚钩鍙板唴缃暟鐧鹃」瀹炵敤鎶€鑳斤紝鑰佹澘浠棤闇€鎳傛妧鏈€佹病鏈夐澶栬繍缁磋礋鎷咃紝灏辫兘杞绘澗瀹炵幇鏀剁泭鏈€澶у寲銆備竴浜鸿法鍥藉叕鍙革紝鏉ヤ簡銆?                    </p>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accio-orange mt-2.5 flex-shrink-0"></span>
+                            <span>鑷爺 AI 鎼滅储寮曟搸锛岀ǔ瀹氭敮鎾戜嚎绾ц鐩橈紝鏀寔 7 绉嶄富娴佽瑷€</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accio-orange mt-2.5 flex-shrink-0"></span>
+                            <span>Deep Research 鑳藉姏锛氳緭鍏ヤ竴涓?idea锛岃嚜鍔ㄧ敓鎴愬畬鏁村晢涓氭柟妗?/span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accio-orange mt-2.5 flex-shrink-0"></span>
+                            <span>澶氭ā鎬侊紙鏂?鍥撅級妫€绱㈠叏鐞?10 浜? 鍟嗗搧锛岄摼鎺ュ叏缃戜緵缁?/span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 rounded-full bg-accio-orange mt-2.5 flex-shrink-0"></span>
+                            <span>娣卞害鏁村悎 1688銆丄libaba.com銆佸叏鐞冪嫭绔嬬珯鍙婄嚎涓嬪伐鍘傝祫婧?/span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="tag px-4 py-2 rounded-full text-sm">甯傚満璋冪爺</span>
+                        <span class="tag px-4 py-2 rounded-full text-sm">閫夊搧鍐崇瓥</span>
+                        <span class="tag px-4 py-2 rounded-full text-sm">浜у搧璁捐</span>
+                        <span class="tag px-4 py-2 rounded-full text-sm">搴楅摵瑁呬慨</span>
+                        <span class="tag px-4 py-2 rounded-full text-sm">鍚庤繍钀ラ摼璺?/span>
+                    </div>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="https://www.accio.com/" target="_blank" class="text-accio-blue hover:text-accio-orange transition-colors inline-flex items-center gap-2">
+                            璁块棶 Accio 瀹樼綉
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                        <a href="https://www.accio.com/work" target="_blank" class="text-accio-blue hover:text-accio-orange transition-colors inline-flex items-center gap-2">
+                            璁块棶 Accio Work
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us -->
+    <section id="why" class="relative py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 section-fade">
+                <div class="accent-line mx-auto mb-6"></div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900">涓轰粈涔堣鍔犲叆鎴戜滑</h2>
+                <p class="text-gray-600 text-lg">
+                    Accio 鍥㈤槦姝ｅ湪閫氳繃鎶€鏈?浜у搧-鍟嗕笟鍖栧叏閾捐矾闂幆锛屾帰绱㈡洿澶氭妧鏈笌鍟嗕笟鍖栫殑鍙兘鎬э紝鏈熷緟瀵瑰ぇ妯″瀷 AI 搴旂敤鍏锋湁鎺㈢储鐑儏鐨勫悓瀛﹀姞鍏ャ€?                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="section-fade job-card rounded-3xl p-8 highlight-border" style="transition-delay: 0.1s;">
+                    <div class="text-5xl mb-6">馃寪</div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-gray-900">鍏ㄧ悆鑸炲彴 路 鐪熷疄鍦烘櫙</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm leading-relaxed">
+                        <li>瀛靛寲浜庨樋閲屽反宸寸涓€涓笟鍔★紝26骞? 鍙戝睍鍘嗗彶锛?/li>
+                        <li>娴烽噺鐪熷疄楂樹环鍊间笟鍔℃暟鎹彲鐢ㄤ簬妯″瀷璁粌 | 鍏ㄧ悆浜ゆ槗闅忔椂闅忓湴閮藉湪鍙戠敓锛屼笟鍔″満鏅鏉傚害楂?| 澶氭ā鎬?澶氳瑷€+鍝?鍟?鍒堕€犲晢娣峰悎鎼滅储+娣卞害琛岀爺锛屾捣閲忓紓鏋勫伐鍏风敓鎬?| 閫夊搧銆佽皥鍒ゃ€佺墿娴併€佽惀閿€銆佹敮浠樸€佸叧鍔♀€︹€︽嫢鏈夋暟鍗冧釜寮傛瀯 API锛屽熀纭€妯″瀷璁粌+鐪熷疄搴旂敤钀藉湴 | 鐪熷疄璧板湪AGI鐨勮矾涓婁笉灞€闄愬湪姒滃崟</li>
+                    </ul>
+                </div>
+
+                <div class="section-fade job-card rounded-3xl p-8 highlight-border" style="transition-delay: 0.2s;">
+                    <div class="text-5xl mb-6">馃殌</div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-gray-900">鍓嶆部鎶€鏈?路 浼樿川鍥㈤槦</h3>
+                    <ul class="space-y-3 text-gray-600 text-sm leading-relaxed">
+                        <li>绉瀬鎺㈢储 Agent 鏂拌寖寮忋€丄gent Model銆佽嚜杩涘寲绛夊墠娌挎妧鏈?/li>
+                        <li>澶氳瑷€銆佸鏂囧寲宸ヤ綔鐜锛岀畝鍗曞姟瀹炴枃鍖?/li>
+                        <li>缁勭粐鏋舵瀯鎵佸钩锛屾捣閲忔暟鎹€佷赴瀵岀畻鍔涖€佸厛杩?AI 鍩虹璁炬柦</li>
+                    </ul>
+                </div>
+
+                <div class="section-fade job-card rounded-3xl p-8 highlight-border" style="transition-delay: 0.3s;">
+                    <div class="text-5xl mb-6">馃拵</div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-gray-900">瀹氬埗鍩瑰吇 路 蹇€熸垚闀?/h3>
+                    <ul class="space-y-3 text-gray-600 text-sm leading-relaxed">
+                        <li>瀹氬埗鍖栧煿鍏昏鍒掍笌澶氭牱鍖栧垱鏂拌棰?/li>
+                        <li>蹇€熸檵鍗囬€氶亾銆佸鏍锋縺鍔辨満鍒?/li>
+                        <li>鏋佸叿绔炰簤鍔涚殑钖叕鍥炴姤锛屾埧琛ラ琛ュ叆鑱岃ˉ璐翠竴搴斾勘鍏?/li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source -->
+    <section id="opensource" class="relative py-24 md:py-32 bg-gradient-to-b from-transparent via-gray-100/30 to-transparent">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 section-fade">
+                <div class="accent-line mx-auto mb-6"></div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900">寮€婧愰」鐩?/h2>
+                <p class="text-gray-600 text-lg">
+                    Accio Lab 鎸佺画鎺㈢储 Agent銆丷L銆佸妯℃€佺瓑鍓嶆部鏂瑰悜锛屽苟灏嗙爺绌舵垚鏋滃紑婧愬垎浜€?                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃洜锔?/div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Dressage</h3>
+                            <p class="text-sm text-gray-500 mb-3">Scalable RL for Any Agent and Any Sandbox</p>
+                            <a href="https://github.com/Accio-Lab/Dressage" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                璁块棶 GitHub
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搳</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">CommerceAgentBench</h3>
+                            <p class="text-sm text-gray-500 mb-3">棣栦釜鐪熷疄鐢靛晢鍦烘櫙 Agent 鍩哄噯娴嬭瘯 路 107 涓鍒扮鍟嗕笟浠诲姟 路 160 涓囨潯鐪熷疄瀵硅瘽涓?20 涓囨潯鎵ц杞ㄨ抗</p>
+                            <a href="https://github.com/Accio-Lab/CommerceAgentBench" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                璁块棶 GitHub
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">JADE</h3>
+                            <p class="text-sm text-gray-500 mb-3">Expert-Grounded Dynamic Evaluation for Open-Ended Professional Tasks</p>
+                            <a href="https://arxiv.org/abs/2602.06486" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">EvoC2F</h3>
+                            <p class="text-sm text-gray-500 mb-3">Compiling Tool Orchestration for Efficient and Evolvable LLM Agents</p>
+                            <a href="https://openreview.net/forum?id=ZSGB91kMOG&referrer=%5Bthe%20profile%20of%20Sicong%20Xie%5D(%2Fprofile%3Fid%3D~Sicong_Xie1)" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Act wisely</h3>
+                            <p class="text-sm text-gray-500 mb-3">Cultivating meta-cognitive tool use in agentic multimodal models</p>
+                            <a href="https://arxiv.org/abs/2604.08545" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">MM-CondChain</h3>
+                            <p class="text-sm text-gray-500 mb-3">A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</p>
+                            <a href="https://arxiv.org/abs/2603.12266" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Beyond Scattered Acceptance</h3>
+                            <p class="text-sm text-gray-500 mb-3">Fast and Coherent Inference for DLMs via Longest Stable Prefixes</p>
+                            <a href="https://arxiv.org/abs/2603.05454" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">SwimBird</h3>
+                            <p class="text-sm text-gray-500 mb-3">Eliciting Switchable Reasoning Mode in Hybrid Autoregressive MLLMs</p>
+                            <a href="https://arxiv.org/abs/2602.06040" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">You Only Forward Once</h3>
+                            <p class="text-sm text-gray-500 mb-3">An Efficient Compositional Judging Paradigm</p>
+                            <a href="https://arxiv.org/abs/2511.16600" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Crosslmm</h3>
+                            <p class="text-sm text-gray-500 mb-3">Decoupling long video sequences from lmms via dual cross-attention mechanisms</p>
+                            <a href="https://arxiv.org/abs/2505.17020" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade job-card rounded-2xl p-6 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-3xl">馃搫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Hybrid Reward Normalization</h3>
+                            <p class="text-sm text-gray-500 mb-3">For Process-supervised Non-verifiable Agentic Tasks</p>
+                            <a href="https://arxiv.org/abs/2509.25598" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                                鏌ョ湅璁烘枃
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roles -->
+    <section id="roles" class="relative py-24 md:py-32 bg-gradient-to-b from-transparent via-gray-100/30 to-transparent">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 section-fade">
+                <div class="accent-line mx-auto mb-6"></div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900">鍥藉唴鍦ㄦ嫑宀椾綅</h2>
+                <p class="text-gray-600 text-lg">鏉窞 路 瀹炴椂鏇存柊 路 鏈熷緟浣犵殑鍔犲叆</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12 section-fade">
+                <button class="category-tab active px-6 py-3 rounded-full text-sm font-medium" data-category="social">绀炬嫑宀椾綅</button>
+                <button class="category-tab px-6 py-3 rounded-full text-sm font-medium" data-category="campus">27 鏍℃嫑 / 闃块噷鏄?/ Bravo Star</button>
+                <button class="category-tab px-6 py-3 rounded-full text-sm font-medium" data-category="intern">鏃ュ父瀹炰範 / 鐮旂┒鍨嬪疄涔?/button>
+            </div>
+
+            <!-- Social Recruitment -->
+            <div id="social" class="hidden-jobs active section-fade">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">AI Infra</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI Infra 澶фā鍨嬭缁?鍒嗗竷寮忚缁冨伐绋嬪笀锛堝悗璁粌/RL锛? Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">Megatron 澶ц妯″垎甯冨紡璁粌 路 SGLang 楂樺悶鍚愭帹鐞?路 post-training infra 路 profiling/monitoring</p>
+                        <div class="text-sm text-gray-700 mb-4 space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">宀椾綅鑱岃矗锛?/p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>鏀拺妯″瀷鍥㈤槦浣跨敤 Megatron 杩涜澶ц妯″垎甯冨紡璁粌锛屽鐞?tensor parallel銆乸ipeline parallel銆乨ata parallel銆乪xpert parallel銆乻equence/context parallel 绛夊苟琛岀瓥鐣ョ浉鍏抽棶棰橈紱</li>
+                                    <li>鏀拺妯″瀷鍥㈤槦浣跨敤 SGLang 杩涜楂樺悶鍚愭帹鐞嗗拰 rollout锛屼紭鍖?batching銆並V cache銆乸refill/decode 璋冨害銆侀暱涓婁笅鏂囩ǔ瀹氭€у拰鍦ㄧ嚎璁粌閾捐矾锛?/li>
+                                    <li>璁捐鍜屽疄鐜伴潰鍚戞洿澶фā鍨嬭妯＄殑 post-training infra锛岄檷浣庤缁冭祫婧愭垚鏈紝鎻愰珮瀹為獙杩唬鏁堢巼鍜岀郴缁熺ǔ瀹氭€э紱</li>
+                                    <li>寤鸿 profiling銆乥enchmark銆乵onitoring 鍜?debugging 宸ュ叿锛屾彁鍗囪缁冨悶鍚愩€丟PU utilization銆乺ollout 绋冲畾鎬у拰鏁呴殰瀹氫綅鏁堢巼锛?/li>
+                                    <li>涓庣爺绌跺憳鍜屾ā鍨嬪伐绋嬪笀绱у瘑鍚堜綔锛屾妸鏂扮殑璁粌鎯虫硶蹇€熻惤鍦版垚鍙鐜般€佸彲鎵╁睍銆佸彲闀挎湡缁存姢鐨勭郴缁熻兘鍔涖€?/li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">浠昏亴瑕佹眰锛?/p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>鎵庡疄鐨勫伐绋嬭兘鍔涳紝鐔熸倝 Python锛屾渶濂界啛鎮変竴绉嶇郴缁熻瑷€鎴栭珮鎬ц兘璁＄畻鐩稿叧璇█锛屼緥濡?C++銆丆UDA銆丷ust 鎴?Go锛?/li>
+                                    <li>鐔熸倝 PyTorch 鐢熸€侊紝鐞嗚В澶фā鍨嬭缁冪殑鍩烘湰娴佺▼锛屽寘鎷?forward/backward銆乷ptimizer銆乧heckpoint銆乤ctivation checkpointing銆乵ixed precision 绛夛紱</li>
+                                    <li>鏈夊垎甯冨紡绯荤粺鎴栧ぇ瑙勬ā璁粌缁忛獙锛岀悊瑙?GPU 闆嗙兢銆丯CCL銆侀€氫俊寮€閿€銆佹樉瀛樼摱棰堛€佸悶鍚愪紭鍖栧拰鏁呴殰鎭㈠锛?/li>
+                                    <li>瀵?Megatron銆丏eepSpeed銆丗SDP銆丼GLang銆乿LLM銆乀ensorRT-LLM銆丷ay 绛夎缁冩垨鎺ㄧ悊绯荤粺涓殑鑷冲皯涓€绫绘湁瀹為檯浣跨敤鎴栧紑鍙戠粡楠岋紱</li>
+                                    <li>鐞嗚В澶фā鍨?post-training 鐨勫熀鏈寖寮忥紝渚嬪 SFT銆丏PO銆丳PO銆丟RPO銆丷LHF銆丷LAIF 鎴?agentic RL锛?/li>
+                                    <li>鑳藉鍦ㄥ鏉傜郴缁熶腑瀹氫綅闂锛氫粠鏃ュ織銆乵etric銆乸rofile銆乧heckpoint銆佸埌鍒嗗竷寮?rank 琛屼负锛岄兘鎰挎剰杩藉埌鏍瑰洜锛?/li>
+                                    <li>鏈夊己 ownership锛岃兘鎶婁竴娆℃€х殑瀹為獙鑴氭湰娌夋穩鎴愬彲澶嶇敤鐨勫伐鍏枫€佹ā鏉裤€佹枃妗ｅ拰绋冲畾鎺ュ彛锛?/li>
+                                    <li>鑳藉拰鐮旂┒鍥㈤槦楂樻晥鍗忎綔锛屾棦灏婇噸鐮旂┒閫熷害锛屼篃閲嶈绯荤粺姝ｇ‘鎬у拰闀挎湡鍙淮鎶ゆ€с€?/li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">鍔犲垎椤癸細</p>
+                                <p class="text-gray-600">鍋氳繃 LLM training infra銆丷LHF infra銆乷nline RL銆乤gent training銆乼ool-use training銆丮oE 璁粌銆佷綆绮惧害璁粌/鎺ㄧ悊銆丳EFT 鎴栭珮璐ㄩ噺寮€婧?infra 椤圭洰銆?/p>
+                            </div>
+                        </div>
+                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100023695010" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">AI Infra</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI Infra 澶фā鍨嬫帹鐞嗕紭鍖栧伐绋嬪笀 - Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">澶фā鍨嬫帹鐞嗙郴缁?路 CUDA 绠楀瓙寮€鍙?路 浣庣簿搴﹁绠?路 鎺ㄧ悊寮曟搸浼樺寲 路 杞‖缁撳悎</p>
+                        <div class="text-sm text-gray-700 mb-4 space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">鑱屼綅鎻忚堪锛?/p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>璐熻矗澶фā鍨嬭缁冨拰鎺ㄧ悊绯荤粺鐨勭爺鍙戝拰鎬ц兘浼樺寲锛屽寘鎷€ц兘璁＄畻鎬ц兘浼樺寲锛屽ぇ妯″瀷鎺ㄧ悊妗嗘灦锛屽ぇ妯″瀷娴侀噺璋冨害锛岄珮鏁?CUDA 绠楀瓙寮€鍙戯紝浣庣簿搴﹁绠楋紝楂樺苟鍙戞湇鍔¤姹備紭鍖栫瓑鎵撻€犻鍏堢殑鎺ㄧ悊寮曟搸銆?/li>
+                                    <li>璐熻矗澶фā鍨嬭缁冨拰鎺ㄧ悊绛夊墠鐬绘€ф妧鏈灦鏋勭殑璋冪爺鍜屽紩鍏ワ紝涓嶉檺浜庡瓙鍥惧尮閰嶃€佺紪璇戜紭鍖栥€佹ā鍨嬮噺鍖栫瓑銆?/li>
+                                    <li>涓庣畻娉曞洟闃熸繁搴﹀悎浣滐紝杩涜绠楁硶鍜岀郴缁熺殑鑱斿悎浼樺寲锛屽寘鎷垎鏋愪笟鍔℃€ц兘鐡堕锛岄€氳繃杞‖缁撳悎鐨勬柟寮忥紝楂樻晥閮ㄧ讲鍜屼紭鍖?AIGC 鏍稿績涓氬姟妯″瀷锛屽缓璁?AI 宸ュ叿閾剧瓑鑳藉姏锛屾敮鎾?AI 涓氬姟鐨勯珮閫熷彂灞曘€?/li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">鑱屼綅瑕佹眰锛?/p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>鐔熺粌鎺屾彙 linux 鐜涓嬬殑 C++/Python 璇█锛屾湁澶ц妯℃満鍣ㄥ涔犳垨鎼滄帹骞跨粡楠岃€呬紭鍏堛€?/li>
+                                    <li>鑷冲皯鎺屾彙涓€绉嶆満鍣ㄥ涔犳鏋讹紙Tensorflow, Pytorch 鎴栧叾浠栬嚜鐮旀鏋讹級銆?/li>
+                                    <li>鑷冲皯鐔熸倝涓€绉嶅ぇ妯″瀷璁粌/鎺ㄧ悊妗嗘灦锛岃濡?vLLM銆乀ensorRT-LLM銆丼GLang 绛夈€?/li>
+                                    <li>鍏锋湁鐙珛瑙ｅ喅澶嶆潅闂鐨勮兘鍔涳紝鑹ソ鐨勫洟闃熷悎浣滅簿绁烇紝鍏峰浼樼鐨勫鏉傞棶棰樻媶瑙ｈ兘鍔涖€?/li>
+                                    <li>鏈夊己鐑堢殑璐ｄ换蹇冿紝鎶€鏈爺绌剁簿绁烇紝娌熼€氳兘鍔涘拰鑷┍鍔涖€?/li>
+                                    <li>鐞嗚В GPU 纭欢鏋舵瀯锛岀悊瑙?GPU 杞欢鏍堬紙CUDA锛宑uDNN锛夛紝鍏峰 GPU 鎬ц兘鍒嗘瀽缁忛獙浼樺厛銆?/li>
+                                </ol>
+                            </div>
+                        </div>
+                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100023695011" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">绠楁硶 路 绠楁硶宸ョ▼鍖?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent 妯″瀷绠楁硶宸ョ▼甯?- Accio</h3>
+                        <p class="text-sm text-gray-500 mb-4">Agent绠楁硶鏋舵瀯璁捐 路 Multi-Agent鍗忎綔 路 Long-horizon杩愯 路 Agent璇勬祴浣撶郴 路 Self-Evolving AI</p>
+                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100021035003" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">绠楁硶 路 绠楁硶宸ョ▼鍖?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent Harness绠楁硶宸ョ▼甯?- Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">Agent璁捐 路 Post-Training 路 RL鍏ㄩ摼璺?路 RAG System 路 AI Native涓撻」鑳藉姏</p>
+                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100023735050" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">绠楁硶 路 绠楁硶宸ョ▼鍖?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent鍚庤缁冪畻娉曞伐绋嬪笀 - Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">Accio Work鏄樋閲屽反宸村浗闄呮暟瀛楀晢涓氶泦鍥㈤樋閲屽浗闄呯珯鍐呴儴瀛靛寲鐨勪竴娆炬垬鐣ョ骇AI鍘熺敓搴旂敤浜у搧锛屼篃鏄樋閲屽湪娴峰钀藉湴鐨勯涓紒涓氱骇AI Agent锛岄€氳繃鎸佺画鎺㈢储Agent銆丄gent Harness銆丷L銆丮emory銆丷easoning绛夊墠娌挎妧鏈紝鑷爺Agent妯″瀷銆丄gent绯荤粺锛屽疄鐜癇2B AI Agent璺ㄨ秺寮忓彂灞曘€?/p>
+                        <div class="text-sm text-gray-700 mb-4 space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">宀椾綅鑱岃矗锛?/p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>鍙備笌Accio Work妯″瀷璁粌涓庣爺鍙戯紝鍖呭惈鑰屼笉闄愪簬Agent璁捐銆丳ost-Training銆丷L绛夊叏閾捐矾寤鸿锛?/li>
+                                    <li>璐熻矗AI Native涓撻」鑳藉姏寤鸿锛屽寘鎷€屼笉闄愪簬RAG System銆丄gent System銆丄gent Training-Function Call/Reasoning/Agentic RL/Proactive Agent/Tool-Use锛?/li>
+                                    <li>鏋勫缓Agent涓撶敤鍚堟垚鏁版嵁绠＄嚎锛氳璁″苟瀹炵幇鑷姩鍖栫殑鍚堟垚鏁版嵁鏂规锛岄噸鐐圭敓浜ч珮璐ㄩ噺鐨勬€濈淮閾俱€佸伐鍏疯皟鐢ㄥ拰鑷垜淇杞ㄨ抗锛?/li>
+                                    <li>Agent浜や簰鐜鎼缓锛氭瀯寤洪珮鎬ц兘銆佸彲鎵╁睍鐨凙gent妗嗘灦鍜岃繍琛岀幆澧冿紙濡備唬鐮佹墽琛屽櫒銆佹祻瑙堝櫒妯℃嫙鍣ㄣ€佹暟鎹簱浜や簰绛夛級锛屼负妯″瀷鎻愪緵瀹炴椂鍙嶉鐨勭幆澧冿紱</li>
+                                    <li>闇€鐞嗚В璁粌鍜屾帹鐞嗘鏋惰繍琛屾満鍒躲€佽В鍐宠鎺ㄤ笉涓€鑷村強涓婁笅鏂囧鐞嗛棶棰橈紱</li>
+                                    <li>鎺㈢储澶фā鍨嬪墠娌挎妧鏈紝鎸佺画杩唬妯″瀷鑳藉姏锛岃惤鍦癆gent锛屾帹鍔ˋccio Work鎸佺画杩唬銆?/li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">浠昏亴瑕佹眰锛?/p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>纭曞＋鍙婁互涓婂鍘嗭紝璁＄畻鏈恒€佺數瀛愩€佷汉宸ユ櫤鑳姐€佽嚜鍔ㄥ寲銆佹暟瀛︾瓑鐩稿叧涓撲笟浼樺厛锛?/li>
+                                    <li>鍏锋湁澶ц妯℃暟鎹悎鎴愩€丆oding Agent銆丼earch Agent銆佸ぇ瑙勬āRL璁粌銆佸晢涓氬満鏅疉gent鏋舵瀯涓庣幆澧冩瀯寤洪」鐩粡楠岃€呬紭鍏堬紱</li>
+                                    <li>鍏锋湁鑹ソ鐨勫伐绋嬬悊瑙ｅ拰钀藉湴鑳藉姏锛岀啛鎮夋ā鍨嬭缁僫nfra搴曞眰鍘熺悊骞舵湁璁粌缁忛獙鑰呬紭鍏堬紱</li>
+                                    <li>鐔熸倝LLM-based Chatbot鎶€鏈師鐞嗚€呬紭鍏堬紱鐔熸倝LLM Post-Training璁粌鏁版嵁鏋勫缓鏂规硶锛屼互鍙奙ulti-Agent绯荤粺妗嗘灦鑰呬紭鍏堬紱</li>
+                                    <li>鍏锋湁鑹ソ鐨勯棶棰樺垎鏋愯В鍐宠兘鍔涳紝娌熼€氬崗浣滆兘鍔涳紝宸ヤ綔绉瀬涓诲姩锛岃兘澶熶笌鍥㈤槦铻嶆唇鍚堜綔锛屼竴璧锋帰绱㈡柊鎶€鏈紝鎺ㄨ繘鎶€鏈繘姝ャ€?/li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">鍔犲垎椤癸細</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>鍏锋湁鎵庡疄鐨勬満鍣ㄥ涔犲熀纭€锛岀啛鎮塁V銆丯LP銆丷L銆丮L銆佸妯℃€佺悊瑙ｃ€佹悳鎺ㄥ箍绛夐鍩熺殑鎶€鏈紝鍦↖CML銆丄CL銆丒MNLP銆丆VPR銆丒CCV銆両CCV銆丯eurIPS銆両CLR銆並DD銆乄WW銆丼IGIR銆丷ecsys銆丼IGGRAPH鎴朣IGGRAPH Asia绛夐《绾т細璁?鏈熷垔涓婂彂琛ㄨ鏂囪€呬紭鍏堬紱</li>
+                                    <li>鍦ㄦ悳绱€佹帹鑽愩€佹悳骞挎帹銆佽嚜鐒惰瑷€澶勭悊NLP銆佽嚜鐒惰瑷€鐞嗚ВNLU銆佸妯℃€併€佹満鍣ㄥ涔犮€佹繁搴﹀涔犵瓑涓€涓垨澶氫釜棰嗗煙鏈夎緝娣卞叆鐨勭爺绌惰€呬紭鍏堬紱</li>
+                                    <li>鍦℅itHub绛夊紑婧愮ぞ鍖哄叿鏈夊奖鍝嶅姏椤圭洰鍙戣〃缁忛獙鑰呬紭鍏堬紱</li>
+                                    <li>鍏锋湁SOTA Agent浜у搧鏍稿績绠楁硶寮€鍙?浼樺寲銆佸ぇ妯″瀷鍩哄骇搴旂敤钀藉湴缁忛獙鑰呬紭鍏堬紱</li>
+                                    <li>鍏锋湁浼樼鐨勪唬鐮佽兘鍔涳紝鐔熺粌鎺屾彙C/C++鎴朠ython锛屽湪ACM/ICPC銆丯OI/IOI銆乀op Coder銆並aggle绛夋瘮璧涜幏濂栬€呬紭鍏堬紱</li>
+                                    <li>鍦↙LM銆佸妯℃€併€丷L銆佸熀纭€妯″瀷銆佷笘鐣屾ā鍨嬬瓑棰嗗煙锛屼富瀵艰繃澶у奖鍝嶅姏椤圭洰鑰呬紭鍏堛€?/li>
+                                </ol>
+                            </div>
+                        </div>
+                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100012355025" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">绠楁硶 路 绠楁硶宸ョ▼鍖?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent绠楁硶宸ョ▼甯?涓撳 - Accio</h3>
+                        <p class="text-sm text-gray-500 mb-4">Multi-Agent绯荤粺 路 Agentic RL 路 Proactive Agent 路 鑷繘鍖朅gent绯荤粺</p>
+                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100022915005" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campus Recruitment -->
+            <div id="campus" class="hidden-jobs section-fade">
+                <div class="job-card rounded-2xl p-6 md:p-8 mb-8 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">馃帗</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">27 鏍℃嫑 / 闃块噷鏄?/ Bravo Star 浜烘墠璁″垝</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                姣曚笟鏃堕棿锛?026 骞?11 鏈?锝?2027 骞?10 鏈堛€傞噸鐐圭爺绌舵柟鍚戝寘鎷?Agentic Post-training銆丄ccio Work Agentic 鍚庤缁冦€侀潰鍚戝紓姝ラ暱绋嬩换鍔＄殑涓诲姩寮?Agent銆丩LM and Multimodal Post-training銆丄gentic RL銆丄gent 鑷繘鍖栫瓑銆?                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-purple-500/20 text-purple-700 border border-purple-500/30">闃块噷鏄?Bravo Star</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agentic RL for Long-horizon Task-闃块噷鏄?Bravo Star</h3>
+                        <p class="text-sm text-gray-500 mb-4">闃块噷鏄?Bravo Star 路 涓诲姩寮?Agent 路 寮傛闀跨▼浠诲姟</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199906040016?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-purple-500/20 text-purple-700 border border-purple-500/30">闃块噷鏄?/ Bravo Star</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agentic Post-training-闃块噷鏄?Bravo Star</h3>
+                        <p class="text-sm text-gray-500 mb-4">闃块噷鏄?/ Bravo Star 路 Agent 鍚庤缁?路 RL</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907660045?deptCodes=" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-purple-500/20 text-purple-700 border border-purple-500/30">闃块噷鏄?/ Bravo Star</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agentic Post-Training and Self-Evolution-闃块噷鏄?Bravo Star</h3>
+                        <p class="text-sm text-gray-500 mb-4">闃块噷鏄?/ Bravo Star 路 Accio Work 路 鍟嗕笟 Agent 璁粌</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907720123?deptCodes=" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-purple-500/20 text-purple-700 border border-purple-500/30">闃块噷鏄?/ Bravo Star</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agentic Post-training Infra-闃块噷鏄?Bravo Star</h3>
+                        <p class="text-sm text-gray-500 mb-4">闃块噷鏄?/ Bravo Star 路 Post-training Infra</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199908280001?deptCodes=" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">绠楁硶宸ョ▼甯?娣卞害瀛︿範</h3>
+                        <p class="text-sm text-gray-500 mb-4">娣卞害瀛︿範 路 绠楁硶宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907800041?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI搴旂敤绠楁硶宸ョ▼甯?/h3>
+                        <p class="text-sm text-gray-500 mb-4">AI 搴旂敤 路 绠楁硶宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907740040?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">绠楁硶宸ョ▼甯?寮哄寲瀛︿範</h3>
+                        <p class="text-sm text-gray-500 mb-4">寮哄寲瀛︿範 路 绠楁硶宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907740101?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent Infra宸ョ▼甯?/h3>
+                        <p class="text-sm text-gray-500 mb-4">Agent Infra 路 宸ョ▼鏋舵瀯</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907640058?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI Infra鐮斿彂宸ョ▼甯?AI Agent</h3>
+                        <p class="text-sm text-gray-500 mb-4">AI Infra 路 AI Agent</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907660055?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">绠楁硶宸ョ▼甯?澶фā鍨嬪悗璁粌 (Post-training)</h3>
+                        <p class="text-sm text-gray-500 mb-4">澶фā鍨嬪悗璁粌 路 Post-training</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907620030?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">绠楁硶宸ョ▼甯?AI Agent</h3>
+                        <p class="text-sm text-gray-500 mb-4">AI Agent 路 绠楁硶宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907700028?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">绠楁硶宸ョ▼甯?澶фā鍨嬪簲鐢?/h3>
+                        <p class="text-sm text-gray-500 mb-4">澶фā鍨嬪簲鐢?路 绠楁硶宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907700032?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">绠楁硶宸ョ▼甯?澶ц瑷€妯″瀷</h3>
+                        <p class="text-sm text-gray-500 mb-4">澶ц瑷€妯″瀷 路 绠楁硶宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907660030?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI Agent鐮斿彂宸ョ▼甯?/h3>
+                        <p class="text-sm text-gray-500 mb-4">AI Agent 路 鐮斿彂宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907620027?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI搴旂敤鐮斿彂宸ョ▼甯?/h3>
+                        <p class="text-sm text-gray-500 mb-4">AI 搴旂敤 路 鐮斿彂宸ョ▼</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907620013?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI浜у搧缁忕悊</h3>
+                        <p class="text-sm text-gray-500 mb-4">AI 浜у搧 路 浜у搧缁忕悊</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907700037?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-blue-500/20 text-blue-700 border border-blue-500/30">鏍℃嫑</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI搴旂敤浜у搧缁忕悊</h3>
+                        <p class="text-sm text-gray-500 mb-4">AI 搴旂敤 路 浜у搧缁忕悊</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907700003?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6 border-dashed border-2 border-gray-200">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl">鉁?/div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">鏇村鏍℃嫑宀椾綅鏁鏈熷緟</h3>
+                                <p class="text-sm text-gray-500 mb-3">姝ｅ紡鎵瑰嵆灏嗗紑鍚紝涔熷彲浠庝笂鏂瑰矖浣嶅厛琛屾姇閫?/p>
+                                <span class="text-xs text-accio-orange">鍐呮帹鐮侊細2T4PDRCC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internship -->
+            <div id="intern" class="hidden-jobs section-fade">
+                <div class="job-card rounded-2xl p-6 md:p-8 mb-8 highlight-border">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">馃敩</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">鏃ュ父瀹炰範 / 鐮旂┒鍨嬪疄涔?/h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                姣曚笟鏃堕棿锛?027 骞?11 鏈堝強涔嬪悗銆傞潰鍚戝 Agent銆丷L銆佸妯℃€併€佸悗璁粌绛夋柟鍚戞湁鐮旂┒鐑儏鐨勫湪鏍＄敓锛屾彁渚涙繁鍏ヤ竴绾?AI 浜у搧鐮斿彂鐨勬満浼氥€?                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">绠楁硶瀹炰範</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鍖椾含/鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">澶фā鍨嬪簲鐢ㄧ畻娉曞疄涔犵敓锛圓gent璁粌/Agent鑷繘鍖栵級- Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">Agent鑷繘鍖栭棴鐜?路 鑷富瀛︿範涓庣粡楠屾矇娣€ 路 鍓嶆部Agent鑷紨杩?/p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199909020001?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">绠楁硶瀹炰範</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鍖椾含/鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agentic Post-Training绠楁硶瀹炰範鐢?/h3>
+                        <p class="text-sm text-gray-500 mb-4">鏍稿績妯″瀷婕旇繘 路 宸ョ▼鍖栦笌鍩哄噯寤鸿 路 Black-box Agent RL 路 Computer-Use Agent</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199908940001?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">鐮旂┒鍨嬪疄涔?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞/鍖椾含
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">鐮旂┒鍨嬪疄涔犵敓 - Agent Harness - Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">Agent鏍稿績鑳藉姏妯″潡 路 澶嶆潅浠诲姟鍔ㄦ€佺紪鎺?路 Long-horizon杩愯 路 Agent璇勬祴浣撶郴</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907820118?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">鐮旂┒鍨嬪疄涔?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">鐮旂┒鍨嬪疄涔犵敓 - 澶фā鍨嬪悗璁粌 - Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">澶ц妯″悗璁粌瀹炶返 路 绠楁硶鐮旂┒涓庝紭鍖?路 鍓嶆部杩借釜</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199909000002?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">鐮旂┒鍨嬪疄涔?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">鐮旂┒鍨嬪疄涔犵敓 - Agentic Post-training - Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">鏍稿績妯″瀷婕旇繘 路 宸ョ▼鍖栦笌鍩哄噯寤鸿 路 Black-box Agent RL 路 Computer-Use Agent</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199908940002?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">鐮旂┒鍨嬪疄涔?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">鐮旂┒鍨嬪疄涔犵敓 - Agentic RL - Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">澶ц妯″悗璁粌瀹炶返 路 Agentic RL鍓嶆部绠楁硶 路 鍓嶆部杩借釜</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907480001?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">鐮旂┒鍨嬪疄涔?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">鐮旂┒鍨嬪疄涔犵敓 - Agentic Search - Accio</h3>
+                        <p class="text-sm text-gray-500 mb-4">澶嶆潅鎺ㄧ悊鑳藉姏鐮旂┒ 路 Post-training鏂规 路 璇勬祴浣撶郴鏋勫缓 路 鍓嶆部杩借釜</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907840003?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">鐮旂┒鍨嬪疄涔?/span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                鏉窞
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">鐮旂┒鍨嬪疄涔犵敓 - Agentic RL - Accio</h3>
+                        <p class="text-sm text-gray-500 mb-4">Agentic RL鐮旂┒涓庤缁?路 鏍稿績鑳藉姏寤鸿 路 璇勬祴浣撶郴鏋勫缓</p>
+                        <a href="https://campus-talent.alibaba.com/campus/position/199907680066?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
+                            绔嬪嵆鎶曢€?                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="mt-12 text-center text-gray-500 text-sm section-fade">
+                馃搶 Tips锛氶潪甯告湡寰呭拰澶у鐨勪氦娴亊~锛孒R 寰俊锛歁ay-6039锛孒R 閭锛歵x02575219@alibaba-inc.com
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply -->
+    <section id="apply" class="relative py-24 md:py-32">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="section-fade">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-accio-orange/10 via-accio-cyan/10 to-accio-blue/10 rounded-3xl blur-3xl"></div>
+                    <div class="relative job-card rounded-3xl p-8 md:p-12 highlight-border text-center">
+                        <div class="accent-line mx-auto mb-6"></div>
+                        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900">鍔犲叆鎴戜滑</h2>
+                        <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
+                            闈炲父鏈熷緟鍜屽ぇ瀹剁殑浜ゆ祦锛屾棤璁烘槸鍜ㄨ銆佹姇閫掋€佷氦娴佽繕鏄繚鎸佽仈绯伙紝閮芥杩庨殢鏃惰仈绯?HR銆?                        </p>
+
+                        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
+                            <div class="tag rounded-2xl p-6 text-left">
+                                <div class="text-sm text-gray-500 mb-2">HR 寰俊</div>
+                                <div class="text-xl font-bold text-gray-900 mb-2">May-6039</div>
+                                <div class="text-xs text-gray-500">澶囨敞锛氬鍚?鍏徃/瀛︽牎+鏂瑰悜/宀椾綅/璇夋眰</div>
+                            </div>
+                            <div class="tag rounded-2xl p-6 text-left">
+                                <div class="text-sm text-gray-500 mb-2">鏍℃嫑鍐呮帹鐮?/div>
+                                <div class="text-xl font-bold text-accio-orange mb-2">2T4PDRCC</div>
+                                <div class="text-xs text-gray-500">鎶曢€掓椂閫夋嫨"闃块噷鍥介檯鏁板瓧鍟嗕笟闆嗗洟 - Accio"</div>
+                            </div>
+                            <div class="tag rounded-2xl p-6 text-left">
+                                <div class="text-sm text-gray-500 mb-2">HR 閭</div>
+                                <div class="text-xl font-bold text-gray-900 mb-2">tx02575219@alibaba-inc.com</div>
+                                <div class="text-xs text-gray-500">鍜ㄨ/鎶曢€?浜ゆ祦鍧囧彲閭欢鑱旂郴</div>
+                            </div>
+                        </div>
+
+                        <!-- 鏍℃嫑鍐呮帹娴锋姤 -->
+                        <div class="mt-8 mb-10">
+                            <img src="campus_referral_poster.jpg" alt="闃块噷宸村反2027灞婂簲灞婄敓鎷涜仒鍐呮帹娴锋姤" class="max-w-sm mx-auto rounded-2xl shadow-lg" />
+                            <p class="text-sm text-gray-500 mt-3">鎵弿浜岀淮鐮侊紝浣跨敤鍐呮帹鐮?<span class="font-bold text-accio-orange">2T4PDRCC</span> 鎶曢€掓剰鍚戝矖浣?/p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="https://aidc-jobs.alibaba.com/" target="_blank" class="btn-primary px-8 py-4 rounded-full text-gray-900 font-bold inline-flex items-center justify-center gap-2">
+                                绀炬嫑瀹樼綉鎶曢€?                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                            <a href="https://campus-talent.alibaba.com/" target="_blank" class="btn-secondary px-8 py-4 rounded-full text-gray-900 font-bold inline-flex items-center justify-center gap-2">
+                                鏍℃嫑瀹樼綉鎶曢€?                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+
+                        <div class="mt-10 pt-8 border-t border-gray-200 text-sm text-gray-500">
+                            宸ヤ綔鍦扮偣锛氫腑鍥芥澀宸炪€佺編鍥?Sunnyvale
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <span class="font-display font-bold text-xl text-gradient italic">Accio Work</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">闃块噷宸村反闃块噷鍥介檯 路 Native AI Agent</p>
+            <p class="text-gray-500 text-xs">
+                鏈〉闈俊鎭粎渚涘弬鑰冿紝鍏蜂綋宀椾綅浠ュ畼鏂规嫑鑱樼綉绔欏疄鏃朵俊鎭负鍑嗐€?            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Tab switching
+        const tabs = document.querySelectorAll('.category-tab');
+        const jobSections = document.querySelectorAll('.hidden-jobs');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.dataset.category;
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                jobSections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === category) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initial visibility
+        setTimeout(() => {
+            document.querySelectorAll('.section-fade').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        }, 100);
+    </script>
+</body>
+</html>
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initial visibility
+        setTimeout(() => {
+            document.querySelectorAll('.section-fade').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        }, 100);
+    </script>
+</body>
+</html>
