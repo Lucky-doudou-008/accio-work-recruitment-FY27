@@ -661,81 +661,52 @@
                             <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">AI Infra</span>
                             <span class="text-gray-500 text-sm flex items-center gap-1">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                杭州
+                                杭州/上海/北京
                             </span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI Infra 大模型训练/分布式训练工程师（后训练/RL）- Accio Work</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Training Infra 工程师（分布式/后训练/RL）- Accio Work</h3>
                         <p class="text-sm text-gray-500 mb-4">Megatron 大规模分布式训练 · SGLang 高吞吐推理 · post-training infra · profiling/monitoring</p>
                         <div class="text-sm text-gray-700 mb-4 space-y-3">
                             <div>
+                                <p class="text-gray-600 mb-2">Accio Work 自研的 Agentic RL Infra —— Dressage 开源啦！也被放到了 Slime 的 README 里，欢迎大家来交流~ GitHub: <a href="https://github.com/Accio-Lab/Dressage" target="_blank" class="text-accio-blue hover:text-accio-orange">https://github.com/Accio-Lab/Dressage</a></p>
+                            </div>
+                            <div>
                                 <p class="font-semibold text-gray-900 mb-1">岗位职责：</p>
+                                <p class="text-gray-600 mb-2">负责大模型分布式训练基础设施建设，支撑新模型结构快速接入及大规模训练任务稳定、高效运行。</p>
                                 <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>支撑模型团队使用 Megatron 进行大规模分布式训练，处理 tensor parallel、pipeline parallel、data parallel、expert parallel、sequence/context parallel 等并行策略相关问题；</li>
-                                    <li>支撑模型团队使用 SGLang 进行高吞吐推理和 rollout，优化 batching、KV cache、prefill/decode 调度、长上下文稳定性和在线训练链路；</li>
-                                    <li>设计和实现面向更大模型规模的 post-training infra，降低训练资源成本，提高实验迭代效率和系统稳定性；</li>
-                                    <li>建设 profiling、benchmark、monitoring 和 debugging 工具，提升训练吞吐、GPU utilization、rollout 稳定性和故障定位效率；</li>
-                                    <li>与研究员和模型工程师紧密合作，把新的训练想法快速落地成可复现、可扩展、可长期维护的系统能力。</li>
+                                    <li>负责新模型结构在 Megatron 等并行训练框架中的适配，包括模型实现、并行切分、权重转换和训练链路接入。</li>
+                                    <li>建设和优化多机多卡训练系统，合理组合 TP、PP、DP、CP、EP、SP 等并行策略。</li>
+                                    <li>完善分布式 Checkpoint、自动 Resume、故障检测及容错恢复机制，提升长周期训练任务的稳定性。</li>
+                                    <li>支持 Attention、稀疏 Attention、线性 Attention、MoE 等模型结构的高效训练。</li>
+                                    <li>定位和解决长上下文及超大规模训练中的显存、通信、负载均衡、数据流水线和算子瓶颈。</li>
+                                    <li>建设多卡数值对齐、梯度正确性、Checkpoint 一致性、显存和吞吐回归测试体系。</li>
+                                    <li>优化混合精度训练、通信计算重叠、显存管理及关键 CUDA/Triton 算子。</li>
                                 </ol>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-900 mb-1">任职要求：</p>
+                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
                                 <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>扎实的工程能力，熟悉 Python，最好熟悉一种系统语言或高性能计算相关语言，例如 C++、CUDA、Rust 或 Go；</li>
-                                    <li>熟悉 PyTorch 生态，理解大模型训练的基本流程，包括 forward/backward、optimizer、checkpoint、activation checkpointing、mixed precision 等；</li>
-                                    <li>有分布式系统或大规模训练经验，理解 GPU 集群、NCCL、通信开销、显存瓶颈、吞吐优化和故障恢复；</li>
-                                    <li>对 Megatron、DeepSpeed、FSDP、SGLang、vLLM、TensorRT-LLM、Ray 等训练或推理系统中的至少一类有实际使用或开发经验；</li>
-                                    <li>理解大模型 post-training 的基本范式，例如 SFT、DPO、PPO、GRPO、RLHF、RLAIF 或 agentic RL；</li>
-                                    <li>能够在复杂系统中定位问题：从日志、metric、profile、checkpoint、到分布式 rank 行为，都愿意追到根因；</li>
-                                    <li>有强 ownership，能把一次性的实验脚本沉淀成可复用的工具、模板、文档和稳定接口；</li>
-                                    <li>能和研究团队高效协作，既尊重研究速度，也重视系统正确性和长期可维护性。</li>
+                                    <li>熟练掌握 Python、PyTorch，熟悉 Megatron-Core、Transformer Engine 等大模型训练框架。</li>
+                                    <li>有新模型结构接入分布式训练框架的实践经验，能够独立完成模型适配、权重转换和训练验证。</li>
+                                    <li>深入理解 TP、PP、DP、CP、EP、SP 等并行策略的原理、约束及组合方式。</li>
+                                    <li>理解 Attention、稀疏 Attention、线性 Attention、MoE 等模型结构及其并行训练特点。</li>
+                                    <li>熟悉 PyTorch Autograd、混合精度、梯度累积、分布式通信和分布式 Checkpoint。</li>
+                                    <li>能够系统定位 Loss 异常、数值不稳定、训练 Hang、OOM、通信超时和性能退化等问题。</li>
+                                    <li>具备多机多卡训练的数值正确性与性能测试能力。</li>
+                                    <li>具备良好的系统设计、工程实现和复杂问题排查能力。</li>
                                 </ol>
                             </div>
                             <div>
                                 <p class="font-semibold text-gray-900 mb-1">加分项：</p>
-                                <p class="text-gray-600">做过 LLM training infra、RLHF infra、online RL、agent training、tool-use training、MoE 训练、低精度训练/推理、PEFT 或高质量开源 infra 项目。</p>
-                            </div>
-                        </div>
-                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100023695010" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
-                            立即投递
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-
-                    <div class="job-card rounded-2xl p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">AI Infra</span>
-                            <span class="text-gray-500 text-sm flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                杭州
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI Infra 大模型推理优化工程师 - Accio Work</h3>
-                        <p class="text-sm text-gray-500 mb-4">大模型推理系统 · CUDA 算子开发 · 低精度计算 · 推理引擎优化 · 软硬结合</p>
-                        <div class="text-sm text-gray-700 mb-4 space-y-3">
-                            <div>
-                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
                                 <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>负责大模型训练和推理系统的研发和性能优化，包括性能计算性能优化，大模型推理框架，大模型流量调度，高效 CUDA 算子开发，低精度计算，高并发服务请求优化等打造领先的推理引擎。</li>
-                                    <li>负责大模型训练和推理等前瞻性技术架构的调研和引入，不限于子图匹配、编译优化、模型量化等。</li>
-                                    <li>与算法团队深度合作，进行算法和系统的联合优化，包括分析业务性能瓶颈，通过软硬结合的方式，高效部署和优化 AIGC 核心业务模型，建设 AI 工具链等能力，支撑 AI 业务的高速发展。</li>
-                                </ol>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-gray-900 mb-1">职位要求：</p>
-                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>熟练掌握 linux 环境下的 C++/Python 语言，有大规模机器学习或搜推广经验者优先。</li>
-                                    <li>至少掌握一种机器学习框架（Tensorflow, Pytorch 或其他自研框架）。</li>
-                                    <li>至少熟悉一种大模型训练/推理框架，诸如 vLLM、TensorRT-LLM、SGLang 等。</li>
-                                    <li>具有独立解决复杂问题的能力，良好的团队合作精神，具备优秀的复杂问题拆解能力。</li>
-                                    <li>有强烈的责任心，技术研究精神，沟通能力和自驱力。</li>
-                                    <li>理解 GPU 硬件架构，理解 GPU 软件栈（CUDA，cuDNN），具备 GPU 性能分析经验优先。</li>
+                                    <li>具备 CUDA、Triton 或其他高性能算子开发和优化经验。</li>
+                                    <li>熟悉 NCCL、RDMA、通信拓扑以及通信计算重叠优化。</li>
+                                    <li>有 MoE、超长上下文或千卡级大模型训练经验。</li>
+                                    <li>熟悉 FP8/BF16 训练、Loss Scaling、累加误差及数值稳定性优化。</li>
+                                    <li>有训练平台、自动容错、可观测性或大规模集群调度系统建设经验。</li>
                                 </ol>
                             </div>
                         </div>
-                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100023695011" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
-                            立即投递
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
                     </div>
 
                     <div class="job-card rounded-2xl p-6">
@@ -746,27 +717,118 @@
                                 杭州
                             </span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent 模型算法工程师 - Accio</h3>
-                        <p class="text-sm text-gray-500 mb-4">Agent算法架构设计 · Multi-Agent协作 · Long-horizon运行 · Agent评测体系 · Self-Evolving AI</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent后训练算法工程师/专家 - Accio</h3>
+                        <p class="text-sm text-gray-500 mb-4">Accio是阿里巴巴国际数字商业集团阿里国际站内部孵化的一款战略级原生AI Agent，通过持续探索Agent、Agent Harness、RL、Memory、Reasoning等前沿技术，自研垂域模型、Agent模型、Agent系统，推动全球B2B跨境贸易实现跨越式发展。</p>
                         <div class="text-sm text-gray-700 mb-4 space-y-3">
                             <div>
-                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
-                                <p class="text-gray-600 mb-2">Accio是阿里巴巴国际数字商业集团阿里国际站内部孵化的一款战略级AI原生应用产品，也是全球首个B2B AI Agent，通过持续探索Agent、LLM、VLM、RL、Memory、Reasoning、AI Search等前沿技术，自研Agent模型、Agent系统，实现B2B AI Agent跨越式发展。</p>
+                                <p class="font-semibold text-gray-900 mb-1">岗位职责：</p>
+                                <p class="text-gray-600 mb-2">负责大模型及长程 Agent 的后训练算法研究与落地，通过高质量数据、SFT、强化学习和蒸馏等方法，持续提升模型的推理、工具使用和复杂任务解决能力。</p>
                                 <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>负责Agent算法架构设计与效果优化，包括但不限于模型优化（Agentic Post-training/Agentic Infra等）自主规划（Planning）、多步推理（Reasoning）、工具/skill调用（Tool Use）、长短期记忆（Memory）及 RAG 增强；</li>
-                                    <li>复杂任务动态编排：设计并实现高扩展性的Multi-Agent协作框架（如Agent Swarm/Agent Team），支持将模糊的宏观目标递归拆解为原子任务；</li>
-                                    <li>Long-horizon运行设计：构建结合"工作记忆+全局知识库"的多级存储系统，解决Agent长期运行中的信息遗忘问题，建立跨Agent的共享上下文能力，设计Agent持续进化框架；</li>
-                                    <li>构建端到端的Agent评测体系，构建生产力场景benchmark，推动Agent在business场景落地；</li>
-                                    <li>探索落地前沿Agent技术，包含而不限于：Agentic Model、Agentic Benchmark、Agentic RL、Pro-active Agent、Function Calling、Tool-Use、Multi-Step Reasoning、Agent Harness、Agentic Post-Training；</li>
-                                    <li>探索Agent Architectures/Structures的上限，在Agent应用研究中最大程度释放模型的能力，研究Self-Evolving AI System，实现Self-Improving Agents。</li>
+                                    <li>探索并落地 SFT、RL、On-Policy Distillation、MOPD 等后训练算法。</li>
+                                    <li>设计长程 Agent 数据构造流程，包括任务生成、环境搭建、工具交互、轨迹采集、清洗过滤、难度分层和数据配比。</li>
+                                    <li>研究多轮、长轨迹及稀疏奖励场景下的 Credit Assignment、Reward Design 和训练稳定性。</li>
+                                    <li>建设 Coding、Work、Research 等 Agent 场景的 Reward、Verifier 与自动化评测体系。</li>
+                                    <li>开展基座模型能力增强与多能力融合，降低后训练过程中的能力遗忘、Reward Hacking 和模式坍缩。</li>
+                                    <li>通过系统化实验分析数据、算法、模型和训练配置对最终效果的影响，并推动算法在大规模训练中落地。</li>
                                 </ol>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-900 mb-1">任职要求：</p>
+                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>熟练掌握 Python、PyTorch，深入理解 Transformer、语言模型训练目标及大模型后训练流程。</li>
+                                    <li>具备 SFT、RL 或模型蒸馏的实践经验，能够独立完成算法实现、训练实验和效果分析。</li>
+                                    <li>熟悉 PPO、GRPO、GSPO 等强化学习算法中的一种或多种，理解 Policy、Reward、Advantage、KL 和 On-policy 等核心概念。</li>
+                                    <li>理解 On-Policy Distillation、多教师蒸馏及能力融合的基本方法。</li>
+                                    <li>具备较强的数据能力，能够设计数据构造、质量过滤、难度分层、数据配比和 Curriculum Learning 方案。</li>
+                                    <li>理解 Agent 多轮交互、工具调用、长程任务和环境反馈，能够将完整 Agent 轨迹转化为有效训练信号。</li>
+                                    <li>具备良好的实验设计与问题分析能力，能够定位数据、算法或训练配置导致的效果问题。</li>
+                                    <li>关注大模型与 Agent 前沿研究，具备快速复现并验证新方法的能力。</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">加分项：</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>强基模经验</li>
+                                    <li>知名research工作或开源工作核心贡献者</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">AI Infra</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                杭州
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agentic RL Infra工程师 - Accio Work</h3>
+                        <div class="text-sm text-gray-700 mb-4 space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">岗位职责：</p>
+                                <p class="text-gray-600 mb-2">负责面向大模型 Agent 的强化学习基础设施建设，支撑 Coding Agent、Research Agent 等复杂智能体的大规模训练和快速迭代。</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>熟悉 slime、veRL 等框架，建设高性能、可扩展的 Agentic RL 训练系统。</li>
+                                    <li>设计优化同步、异步架构，解决长尾 Rollout 优化 Colocate、训推分离或混合部署方案。</li>
+                                    <li>支持 Claude Code 类黑盒 Agent 的 RL 训练，包括多轮模型调用、工具交互、轨迹采集与还原、Action Mask、Logprob 对齐。</li>
+                                    <li>优化训推一致性和异步policy问题，建立 Policy Version 等机制，实践 R3、Staleness control、样本过滤等方案。</li>
+                                    <li>建设训练端到推理端的 Policy 参数同步能力，包括权重转换、分发、重分片、版本管理及原子切换。</li>
+                                    <li>定位并优化任务调度、资源利用率和训练稳定性问题。持续优化多机多卡训练的性能、稳定性、容错能力和可观测性。</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>具备 slime、veRL、OpenRLHF、TRL 或其他成熟 LLM RL 框架的实际使用、二次开发或核心模块建设经验。</li>
+                                    <li>理解 PPO、GRPO、GSPO 等大模型强化学习算法，熟悉 On-policy、Off-policy、Importance Sampling 和 Policy Staleness 等概念。</li>
+                                    <li>深入理解同步与异步 RL 的执行原理，能够分析 Fully Async、Colocate 与训推分离在吞吐、通信和稳定性上的权衡。</li>
+                                    <li>熟悉 Agentic Rollout，理解多轮交互、工具调用、长轨迹、环境反馈及黑盒 Agent 的训练数据构造方法。</li>
+                                    <li>理解训练与推理一致性问题，熟悉 Policy 参数同步、版本控制以及 MoE Router 一致性等机制。</li>
+                                    <li>熟练掌握 Python 和 PyTorch，熟悉 Megatron-LM、FSDP、Ray 等分布式训练或调度技术中的一种或多种。</li>
+                                    <li>具备良好的系统设计、性能分析和复杂问题排查能力。</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">加分项：</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>熟悉 SGLang、vLLM、TensorRT-LLM 等推理引擎。</li>
+                                    <li>有 Coding Agent、Search Agent 或其他长链路 Agent 的 RL 训练经验。</li>
+                                    <li>有 MoE、R3、异步 RL Staleness Control 或大规模 Policy Weight Sync 的实践经验。</li>
+                                    <li>有大规模 GPU 集群、RDMA/NCCL 通信、任务调度或生产级 RL 平台建设经验。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card rounded-2xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">算法 · 算法工程化</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                杭州
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agentic Post-Training算法工程师/专家 - Accio Work</h3>
+                        <p class="text-sm text-gray-500 mb-4">Accio是阿里巴巴国际数字商业集团阿里国际站内部孵化的一款战略级AI原生应用产品，也是全球首个B2B AI Search Agent，通过持续探索Agent、LLM、VLM、RL、Memory、Reasoning、AI Search等前沿技术，自研基座、Agent系统以及AI Search系统，实现全球B2B跨境贸易跨越式发展。</p>
+                        <div class="text-sm text-gray-700 mb-4 space-y-3">
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">岗位职责：</p>
+                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                                    <li>构建Agent专用合成数据管线：设计并实现自动化的合成数据方案，重点生产高质量的思维链、工具调用和自我修正轨迹；</li>
+                                    <li>Agent交互环境搭建：构建高性能、可扩展的Agent框架和运行环境（如代码执行器、浏览器模拟器、数据库交互等），为模型提供实时反馈的环境；</li>
+                                    <li>Agentic RL：应用并改进RL算法，提升模型在长程任务（Long-horizon tasks）中的成功率和鲁棒性；</li>
+                                    <li>评估体系建设：开发超越传统基准测试的动态评估方案，针对规划能力、工具选择准确率、幻觉控制及错误恢复能力建立量化指标；</li>
+                                    <li>探索落地前沿Agent技术，包含而不限于：Agentic Model、Agentic Benchmark、Agentic RL、Pro-active Agent、Function Calling、Tool-Use、Multi-Step Reasoning、Agent Harness、Agentic Post-Training。</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
                                 <ol class="list-decimal list-inside space-y-1 text-gray-600">
                                     <li>硕士及以上学历，计算机、电子、人工智能、自动化、数学、物理、等相关专业优先；</li>
-                                    <li>具有良好的工程能力，熟悉Python等开发框架；</li>
-                                    <li>对大模型和Agent有较深入的理解，熟悉常见的大模型后训练、实施模式、提示工程、评估框架、检索框架者优先。包含而不限于具有Agent数据合成、Agentic RL训练、Agentic RL Infra（例如CodeRL，Reward System）、Coding/Search Agent构建、Agent记忆系统构建、Multi-agent协作设计者优先；了解Agent Architectures/Structures（Multi-Agent、Context Engineering/Management、ReAct/PlanAct/CodeAct）者优先；了解Agent相关的交互协议（MCP、A2A、Function Calling）者有优先；</li>
+                                    <li>具有大规模数据合成、Coding Agent、Search Agent、大规模RL训练、商业场景Agent架构与环境构建项目经验者优先；</li>
+                                    <li>具有良好的工程能力，熟悉Verl/Slime/RL2等模型训练infra并有训练经验者优先；</li>
+                                    <li>熟悉LLM-based Chatbot技术原理者优先；熟悉LLM Post-Training训练数据构建方法，以及Multi-Agent系统框架者优先；</li>
                                     <li>有较强的自驱力、学习力、创新力和抗压能力，能够跟上正在快速变化的AI时代。</li>
                                 </ol>
                             </div>
@@ -782,107 +844,39 @@
                                 </ol>
                             </div>
                         </div>
-                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100021035003" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
-                            立即投递
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
                     </div>
 
                     <div class="job-card rounded-2xl p-6">
                         <div class="flex items-start justify-between mb-4">
-                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">算法 · 算法工程化</span>
+                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">AI Infra</span>
                             <span class="text-gray-500 text-sm flex items-center gap-1">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 杭州
                             </span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent Harness算法工程师 - Accio Work</h3>
-                        <p class="text-sm text-gray-500 mb-4">Agent设计 · Post-Training · RL全链路 · RAG System · AI Native专项能力</p>
-                        <div class="text-sm text-gray-700 mb-4 space-y-3">
-                            <div>
-                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
-                                <p class="text-gray-600 mb-2">Accio Work是阿里巴巴国际数字商业集团阿里国际站内部孵化的一款战略级AI原生应用产品，也是阿里在海外落地的首个企业级AI Agent，通过持续探索Agent、Agent Harness、RL、Memory、Reasoning等前沿技术，自研Agent模型、Agent系统，实现B2B AI Agent跨越式发展。</p>
-                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>参与Accio Work模型训练与研发，包含而不限于Agent设计、Post-Training、RL等全链路建设；</li>
-                                    <li>负责AI Native专项能力建设，包括而不限于RAG System、Agent System、Agent Training-Function Call/Reasoning/Agentic RL/Proactive Agent/Tool-Use；</li>
-                                    <li>探索大模型前沿技术，持续迭代模型能力，落地Agent，推动Accio Work持续迭代。</li>
-                                </ol>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-gray-900 mb-1">任职要求：</p>
-                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>硕士及以上学历，计算机、电子、人工智能、自动化、数学等相关专业优先；</li>
-                                    <li>具备大模型后训练相关研究/落地经验者优先；</li>
-                                    <li>具备Agent训练经验，多模态Agent生图/生视频场景经验，以及熟悉Agent前沿技术与底层原理者优先；</li>
-                                    <li>具有良好的问题分析解决能力，沟通协作能力，工作积极主动，能够与团队融洽合作，一起探索新技术，推进技术进步。</li>
-                                </ol>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-gray-900 mb-1">加分项：</p>
-                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>具有扎实的机器学习基础，熟悉CV、NLP、RL、ML、多模态理解、搜推广等领域的技术，在ICML、ACL、EMNLP、CVPR、ECCV、ICCV、NeurIPS、ICLR、KDD、WWW、SIGIR、Recsys、SIGGRAPH或SIGGRAPH Asia等顶级会议/期刊上发表论文者优先；</li>
-                                    <li>在搜索、推荐、搜广推、自然语言处理NLP、自然语言理解NLU、多模态、机器学习、深度学习等一个或多个领域有较深入的研究者优先；</li>
-                                    <li>在GitHub等开源社区具有影响力项目发表经验者优先；</li>
-                                    <li>具有SOTA Agent产品核心算法开发/优化、大模型基座应用落地经验者优先；</li>
-                                    <li>具有优秀的代码能力，熟练掌握C/C++或Python，在ACM/ICPC、NOI/IOI、Top Coder、Kaggle等比赛获奖者优先；</li>
-                                    <li>在LLM、多模态、RL、基础模型、世界模型等领域，主导过大影响力项目者优先。</li>
-                                </ol>
-                            </div>
-                        </div>
-                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100023735050" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
-                            立即投递
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-
-                    <div class="job-card rounded-2xl p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <span class="role-badge px-3 py-1 rounded-full bg-accio-orange/20 text-accio-orange border border-accio-orange/30">算法 · 算法工程化</span>
-                            <span class="text-gray-500 text-sm flex items-center gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                杭州
-                            </span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agent后训练算法工程师 - Accio Work</h3>
-                        <p class="text-sm text-gray-500 mb-4">Accio Work是阿里巴巴国际数字商业集团阿里国际站内部孵化的一款战略级AI原生应用产品，也是阿里在海外落地的首个企业级AI Agent，通过持续探索Agent、Agent Harness、RL、Memory、Reasoning等前沿技术，自研Agent模型、Agent系统，实现B2B AI Agent跨越式发展。</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">大模型推理工程师/专家</h3>
+                        <p class="text-sm text-gray-500 mb-4">大模型推理系统 · CUDA 算子开发 · 低精度计算 · 推理引擎优化 · 软硬结合</p>
                         <div class="text-sm text-gray-700 mb-4 space-y-3">
                             <div>
                                 <p class="font-semibold text-gray-900 mb-1">岗位职责：</p>
                                 <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>参与Accio Work模型训练与研发，包含而不限于Agent设计、Post-Training、RL等全链路建设；</li>
-                                    <li>负责AI Native专项能力建设，包括而不限于RAG System、Agent System、Agent Training-Function Call/Reasoning/Agentic RL/Proactive Agent/Tool-Use；</li>
-                                    <li>构建Agent专用合成数据管线：设计并实现自动化的合成数据方案，重点生产高质量的思维链、工具调用和自我修正轨迹；</li>
-                                    <li>Agent交互环境搭建：构建高性能、可扩展的Agent框架和运行环境（如代码执行器、浏览器模拟器、数据库交互等），为模型提供实时反馈的环境；</li>
-                                    <li>需理解训练和推理框架运行机制、解决训推不一致及上下文处理问题；</li>
-                                    <li>探索大模型前沿技术，持续迭代模型能力，落地Agent，推动Accio Work持续迭代。</li>
+                                    <li>负责大模型训练和推理系统的研发和性能优化，包括性能计算性能优化，大模型推理框架，大模型流量调度，高效 CUDA 算子开发，低精度计算，高并发服务请求优化等打造领先的推理引擎。</li>
+                                    <li>负责大模型训练和推理等前瞻性技术架构的调研和引入，不限于子图匹配、编译优化、模型量化等。</li>
+                                    <li>与算法团队深度合作，进行算法和系统的联合优化，包括分析业务性能瓶颈，通过软硬结合的方式，高效部署和优化 AIGC 核心业务模型，建设 AI 工具链等能力，支撑 AI 业务的高速发展。</li>
                                 </ol>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-900 mb-1">任职要求：</p>
+                                <p class="font-semibold text-gray-900 mb-1">职位描述：</p>
                                 <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>硕士及以上学历，计算机、电子、人工智能、自动化、数学等相关专业优先；</li>
-                                    <li>具有大规模数据合成、Coding Agent、Search Agent、大规模RL训练、商业场景Agent架构与环境构建项目经验者优先；</li>
-                                    <li>具有良好的工程理解和落地能力，熟悉模型训练infra底层原理并有训练经验者优先；</li>
-                                    <li>熟悉LLM-based Chatbot技术原理者优先；熟悉LLM Post-Training训练数据构建方法，以及Multi-Agent系统框架者优先；</li>
-                                    <li>具有良好的问题分析解决能力，沟通协作能力，工作积极主动，能够与团队融洽合作，一起探索新技术，推进技术进步。</li>
-                                </ol>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-gray-900 mb-1">加分项：</p>
-                                <ol class="list-decimal list-inside space-y-1 text-gray-600">
-                                    <li>具有扎实的机器学习基础，熟悉CV、NLP、RL、ML、多模态理解、搜推广等领域的技术，在ICML、ACL、EMNLP、CVPR、ECCV、ICCV、NeurIPS、ICLR、KDD、WWW、SIGIR、Recsys、SIGGRAPH或SIGGRAPH Asia等顶级会议/期刊上发表论文者优先；</li>
-                                    <li>在搜索、推荐、搜广推、自然语言处理NLP、自然语言理解NLU、多模态、机器学习、深度学习等一个或多个领域有较深入的研究者优先；</li>
-                                    <li>在GitHub等开源社区具有影响力项目发表经验者优先；</li>
-                                    <li>具有SOTA Agent产品核心算法开发/优化、大模型基座应用落地经验者优先；</li>
-                                    <li>具有优秀的代码能力，熟练掌握C/C++或Python，在ACM/ICPC、NOI/IOI、Top Coder、Kaggle等比赛获奖者优先；</li>
-                                    <li>在LLM、多模态、RL、基础模型、世界模型等领域，主导过大影响力项目者优先。</li>
+                                    <li>熟练掌握 linux 环境下的 C++/Python 语言，有大规模机器学习或搜推广经验者优先。</li>
+                                    <li>至少掌握一种机器学习框架（Tensorflow, Pytorch 或其他自研框架）。</li>
+                                    <li>至少熟悉一种大模型训练/推理框架，诸如 vLLM、TensorRT-LLM、SGLang 等。</li>
+                                    <li>具有独立解决复杂问题的能力，良好的团队合作精神，具备优秀的复杂问题拆解能力。</li>
+                                    <li>有强烈的责任心，技术研究精神，沟通能力和自驱力。</li>
+                                    <li>理解 GPU 硬件架构，理解 GPU 软件栈（CUDA，cuDNN），具备 GPU 性能分析经验优先。</li>
                                 </ol>
                             </div>
                         </div>
-                        <a href="https://aidc-jobs.alibaba.com/off-campus/position-detail?lang=zh&positionId=100012355025" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
-                            立即投递
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -1264,6 +1258,10 @@
                     <div class="job-card rounded-2xl p-6">
                         <div class="flex items-start justify-between mb-4">
                             <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">研究型实习</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                杭州
+                            </span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">研究型实习生 - Training Infra工程师</h3>
                         <a href="https://campus-talent.alibaba.com/campus/position/199910100004?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
@@ -1275,6 +1273,10 @@
                     <div class="job-card rounded-2xl p-6">
                         <div class="flex items-start justify-between mb-4">
                             <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">研究型实习</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                杭州
+                            </span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">研究型实习生 - RL Systems工程师</h3>
                         <a href="https://campus-talent.alibaba.com/campus/position/199910060002?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
@@ -1286,6 +1288,10 @@
                     <div class="job-card rounded-2xl p-6">
                         <div class="flex items-start justify-between mb-4">
                             <span class="role-badge px-3 py-1 rounded-full bg-green-500/20 text-green-700 border border-green-500/30">研究型实习</span>
+                            <span class="text-gray-500 text-sm flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                杭州
+                            </span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">研究型实习生 - Agent后训练算法</h3>
                         <a href="https://campus-talent.alibaba.com/campus/position/199910000008?deptCodes=AT1LW3" target="_blank" class="inline-flex items-center gap-2 text-accio-blue hover:text-accio-orange transition-colors text-sm font-medium">
